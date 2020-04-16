@@ -59,24 +59,17 @@ jobs:
         docker rmi `docker images -q`
         sudo -E apt-get -q purge azure-cli ghc* zulu* hhvm llvm* firefox google* dotnet* powershell openjdk* mysql* php*
         sudo -E apt-get -qq autoremove --purge
-        sudo -E apt-get -qq clean
-      
-      - name: 同步最新代码
-        run: |
-             git remote add openwrt https://github.com/coolsnowwolf/lede.git
-             git pull openwrt master
-             git remote -v
-                 
+        sudo -E apt-get -qq clean 
      - name: 涡轮增雕
         run: |
           cd package
           mkdir openwrt-packages
           cd openwrt-packages
           git clone https://github.com/fw876/helloworld.git
-          git clone https://github.com/destan19/OpenAppFilter.git
-          git clone https://github.com/tty228/luci-app-serverchan.git
-          git clone https://github.com/pymumu/smartdns.git
-          git clone https://github.com/vernesong/OpenClash.git 
+                    https://github.com/destan19/OpenAppFilter.git
+                    https://github.com/tty228/luci-app-serverchan.git
+                    https://github.com/pymumu/smartdns.git
+                    https://github.com/vernesong/OpenClash.git 
                  
    - name: Clone source code
       run: git clone --depth 1 $REPO_URL -b $REPO_BRANCH openwrt
