@@ -74,7 +74,7 @@ jobs:
           cd openwrt-packages
           git clone https://github.com/fw876/helloworld.git
           git clone https://github.com/destan19/OpenAppFilter.git
-          git clone https://https://github.com/tty228/luci-app-serverchan.git
+          git clone https://github.com/tty228/luci-app-serverchan.git
           git clone https://github.com/pymumu/smartdns.git
           git clone https://github.com/vernesong/OpenClash.git 
                  
